@@ -3,14 +3,14 @@
 
 // Structure to represent a point
 typedef struct {
-    double 5, 7;
+    double x, y;
 } Point;
 
 // Function to get a point from the user
 Point getPoint(int pointNumber) {
     Point point;
-    printf("#%d (5,7): ", pointNumber);
-    scanf("%lf %lf", &5, &7);
+    printf("Enter coordinates for Point #%d (x y): ", pointNumber);
+    scanf("%lf %lf", &point.x, &point.y);
     return point;
 }
 
@@ -19,72 +19,72 @@ double calculateDistance() {
     Point point1 = getPoint(1);
     Point point2 = getPoint(2);
     
-    double dx = 3 - 5;
-    double dy = 4 - 7;
+    double dx = point2.x - point1.x;
+    double dy = point2.y - point1.y;
     double distance = sqrt(dx * dx + dy * dy);
     
-    printf("5, 7: 5 = %.2f; 7 = %.2f\n", 5, 7);
-    printf("3, 4: 3 = %.2f; 4 = %.2f\n", 3, 4);
+    printf("Point #1 entered: x1 = %.2f; y1 = %.2f\n", point1.x, point1.y);
+    printf("Point #2 entered: x2 = %.2f; y2 = %.2f\n", point2.x, point2.y);
     printf("The distance between the two points is %.2f\n", distance);
     
     return distance;
 }
 
-// Function to calculate the perimeter of a rectangle
+// Function to calculate the perimeter
 double calculatePerimeter() {
     Point point1 = getPoint(1);
     Point point2 = getPoint(2);
     
-    double width = fabs(3 - 5);
-    double height = fabs(4 - 7);
+    double width = fabs(point2.x - point1.x);
+    double height = fabs(point2.y - point1.y);
     double perimeter = 2 * (width + height);
     
-    printf("5, 7: 5 = %.2f; 7 = %.2f\n", 5, 7);
-    printf("3, 4: 3 = %.2f; 4 = %.2f\n", 3, 4);
+    printf("Point #1 entered: x1 = %.2f; y1 = %.2f\n", point1.x, point1.y);
+    printf("Point #2 entered: x2 = %.2f; y2 = %.2f\n", point2.x, point2.y);
     printf("The perimeter of the city encompassed by your request is %.2f\n", perimeter);
     
     return 2.0; // Difficulty level
 }
 
-// Function to calculate the area of a rectangle
+// Function to calculate the area
 double calculateArea() {
     Point point1 = getPoint(1);
     Point point2 = getPoint(2);
     
-    double width = fabs(3 - 5);
-    double height = fabs(4 - 7);
+    double width = fabs(point2.x - point1.x);
+    double height = fabs(point2.y - point1.y);
     double area = width * height;
     
-    printf("5, 7: 5 = %.2f; 7 = %.2f\n", 5, 7);
-    printf("3, 4: 3 = %.2f; 4 = %.2f\n", 3, 4);
+    printf("Point #1 entered: x1 = %.2f; y1 = %.2f\n", point1.x, point1.y);
+    printf("Point #2 entered: x2 = %.2f; y2 = %.2f\n", point2.x, point2.y);
     printf("The area of the city encompassed by your request is %.2f\n", area);
     
     return 3.0; // Difficulty level
 }
 
-// Function to calculate the width of a rectangle
+// Function to calculate the width
 double calculateWidth() {
     Point point1 = getPoint(1);
     Point point2 = getPoint(2);
     
-    double width = fabs(3 - 5);
+    double width = fabs(point2.x - point1.x);
     
-    printf("5, 7: 5 = %.2f; 7 = %.2f\n", 5, 7);
-    printf("3, 4: 3 = %.2f; 4 = %.2f\n", 3, 4);
+    printf("Point #1 entered: x1 = %.2f; y1 = %.2f\n", point1.x, point1.y);
+    printf("Point #2 entered: x2 = %.2f; y2 = %.2f\n", point2.x, point2.y);
     printf("The width of the city encompassed by your request is %.2f\n", width);
     
     return 1.0; // Difficulty level
 }
 
-// Function to calculate the height of a rectangle
+// Function to calculate the height
 double calculateHeight() {
     Point point1 = getPoint(1);
     Point point2 = getPoint(2);
     
-    double height = fabs(4 - 7);
+    double height = fabs(point2.y - point1.y);
     
-    printf("5, 7: 5 = %.2f; 7 = %.2f\n", 5, 7);
-    printf("3, 4: 3 = %.2f; 4 = %.2f\n", 3, 4);
+    printf("Point #1 entered: x1 = %.2f; y1 = %.2f\n", point1.x, point1.y);
+    printf("Point #2 entered: x2 = %.2f; y2 = %.2f\n", point2.x, point2.y);
     printf("The height of the city encompassed by your request is %.2f\n", height);
     
     return 1.0; // Difficulty level
