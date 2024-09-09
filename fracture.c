@@ -1,3 +1,12 @@
+//********************************************************
+// fracture.c
+// Author: Connor Farmer
+// Class: COP 3223, Professor Parra
+// UCF ID:5626191
+//
+// Output: (to the command line) A breif Message
+// //********************************************************
+
 #include <stdio.h>
 #include <math.h>
 
